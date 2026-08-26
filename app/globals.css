@@ -1,26 +1,162 @@
 @import "tailwindcss";
 
+@theme {
+  /* Surfaces & Backgrounds */
+  --color-base: var(--bg-base);
+  --color-surface: var(--bg-surface);
+  --color-surface-secondary: var(--bg-surface-secondary);
+  --color-elevated: var(--bg-elevated);
+  --color-hover: var(--bg-hover);
+  --color-wash: var(--bg-wash);
+
+  /* Typography */
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-inverse: var(--text-inverse);
+  --color-link: var(--text-link);
+
+  /* Borders */
+  --color-subtle: var(--border-subtle);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-muted: var(--border-muted);
+
+  /* Actions & Accents */
+  --color-action-primary: var(--action-primary);
+  --color-action-primary-hover: var(--action-primary-hover);
+  --color-action-destructive: var(--action-destructive);
+  --color-icon-like: var(--icon-like);
+
+  /* Spacing */
+  --spacing-3xs: var(--space-3xs); 
+  --spacing-2xs: var(--space-2xs); 
+  --spacing-xs: var(--space-xs);   
+  --spacing-sm: var(--space-sm);   
+  --spacing-md: var(--space-md);   
+  --spacing-lg: var(--space-lg);   
+  --spacing-xl: var(--space-xl);   
+  --spacing-2xl: var(--space-2xl); 
+  
+  --spacing-header: var(--space-header);     
+  --spacing-sidebar: var(--space-sidebar);   
+  --spacing-feed: var(--space-feed);         
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* =========================================
+     1. BASE COLORS (PRIMITIVES)
+  ========================================= */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Grays / Neutrals */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #efefef;
+  --gray-300: #dbdbdb;
+  --gray-400: #a8a8a8;
+  --gray-500: #737373;
+  --gray-600: #555555;
+  --gray-700: #363636;
+  --gray-800: #262626;
+  --gray-900: #121212;
+
+  /* Blues (Brand) */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #0095f6; /* Instagram Primary */
+  --blue-600: #1877f2; /* Instagram Hover */
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* Reds (Destructive / Likes) */
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ed4956; /* Destructive */
+  --red-600: #ff3040; /* Heart Icon */
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+
+  /* Greens (Verified / Success) */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-500: #00ba7c; /* Verified Badge */
+  --green-900: #14532d;
+
+  /* Story Gradient Stops */
+  --story-yellow: #feda75;
+  --story-orange: #fa7e1e;
+  --story-rose: #d62976;
+  --story-purple: #962fbf;
+  --story-blue: #4f5bd5;
+
+  /* Spacing */
+  --space-3xs: 0.125rem; 
+  --space-2xs: 0.25rem;  
+  --space-xs: 0.5rem;    
+  --space-sm: 0.75rem;   
+  --space-md: 1rem;      
+  --space-lg: 1.5rem;    
+  --space-xl: 2rem;      
+  --space-2xl: 3rem;     
+  --space-header: 3.75rem; 
+  --space-sidebar: 15.25rem; 
+  --space-feed: 29.375rem; 
+
+  /* =========================================
+     2. SEMANTIC TOKENS (LIGHT MODE)
+  ========================================= */
+  --bg-base: var(--white);
+  --bg-surface: var(--white);
+  --bg-surface-secondary: var(--gray-50); 
+  --bg-elevated: var(--white);
+  --bg-hover: var(--gray-100);
+  --bg-wash: var(--gray-50);
+
+  --text-primary: var(--black);
+  --text-secondary: var(--gray-500);
+  --text-muted: var(--gray-400);
+  --text-inverse: var(--white);
+  --text-link: var(--blue-500);
+
+  --border-subtle: var(--gray-300);
+  --border-secondary: var(--gray-200); 
+  --border-muted: var(--gray-200);
+
+  --action-primary: var(--blue-500);
+  --action-primary-hover: var(--blue-600);
+  --action-destructive: var(--red-500);
+  --icon-like: var(--red-600);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =========================================
+   3. SEMANTIC TOKENS (DARK MODE)
+========================================= */
+.dark,
+[data-theme="dark"] {
+  --bg-base: var(--black);
+  --bg-surface: var(--gray-900);
+  --bg-surface-secondary: var(--gray-800);
+  --bg-elevated: var(--gray-800);
+  --bg-hover: var(--gray-800);
+  --bg-wash: var(--gray-900);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-400);
+  --text-muted: var(--gray-500);
+  --text-inverse: var(--black);
+  --text-link: #3badf8; /* Lighter blue for dark mode readability */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --border-subtle: var(--gray-800);
+  --border-secondary: var(--gray-700);
+  --border-muted: var(--gray-700);
 }
