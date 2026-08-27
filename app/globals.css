@@ -185,8 +185,8 @@
 	--text-link: #3badf8;
 
 	--border-subtle: var(--gray-600);
-	--border-secondary: var(--gray-500);
-	--border-muted: var(--gray-400);
+	--border-secondary: var(--gray-400);
+	--border-muted: var(--gray-700);
 }
 
 /* =========================================
