@@ -1,162 +1,233 @@
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces & Backgrounds */
-  --color-base: var(--bg-base);
-  --color-surface: var(--bg-surface);
-  --color-surface-secondary: var(--bg-surface-secondary);
-  --color-elevated: var(--bg-elevated);
-  --color-hover: var(--bg-hover);
-  --color-wash: var(--bg-wash);
+	/* Surfaces & Backgrounds */
+	--color-base: var(--bg-base);
+	--color-surface: var(--bg-surface);
+	--color-surface-secondary: var(--bg-surface-secondary);
+	--color-elevated: var(--bg-elevated);
+	--color-hover: var(--bg-hover);
+	--color-wash: var(--bg-wash);
 
-  /* Typography */
-  --color-primary: var(--text-primary);
-  --color-secondary: var(--text-secondary);
-  --color-muted: var(--text-muted);
-  --color-inverse: var(--text-inverse);
-  --color-link: var(--text-link);
+	/* Typography */
+	--color-primary: var(--text-primary);
+	--color-secondary: var(--text-secondary);
+	--color-muted: var(--text-muted);
+	--color-inverse: var(--text-inverse);
+	--color-link: var(--text-link);
 
-  /* Borders */
-  --color-subtle: var(--border-subtle);
-  --color-border-subtle: var(--border-subtle);
-  --color-border-secondary: var(--border-secondary);
-  --color-border-muted: var(--border-muted);
+	/* Borders */
+	--color-subtle: var(--border-subtle);
+	--color-border-subtle: var(--border-subtle);
+	--color-border-secondary: var(--border-secondary);
+	--color-border-muted: var(--border-muted);
 
-  /* Actions & Accents */
-  --color-action-primary: var(--action-primary);
-  --color-action-primary-hover: var(--action-primary-hover);
-  --color-action-destructive: var(--action-destructive);
-  --color-icon-like: var(--icon-like);
+	/* Actions & Accents */
+	--color-action-primary: var(--action-primary);
+	--color-action-primary-hover: var(--action-primary-hover);
+	--color-action-destructive: var(--action-destructive);
+	--color-icon-like: var(--icon-like);
 
-  /* Spacing */
-  --spacing-3xs: var(--space-3xs); 
-  --spacing-2xs: var(--space-2xs); 
-  --spacing-xs: var(--space-xs);   
-  --spacing-sm: var(--space-sm);   
-  --spacing-md: var(--space-md);   
-  --spacing-lg: var(--space-lg);   
-  --spacing-xl: var(--space-xl);   
-  --spacing-2xl: var(--space-2xl); 
-  
-  --spacing-header: var(--space-header);     
-  --spacing-sidebar: var(--space-sidebar);   
-  --spacing-feed: var(--space-feed);         
+	/* Spacing */
+	--spacing-3xs: var(--space-3xs);
+	--spacing-2xs: var(--space-2xs);
+	--spacing-xs: var(--space-xs);
+	--spacing-sm: var(--space-sm);
+	--spacing-md: var(--space-md);
+	--spacing-lg: var(--space-lg);
+	--spacing-xl: var(--space-xl);
+	--spacing-2xl: var(--space-2xl);
+
+	--spacing-header: var(--space-header);
+	--spacing-sidebar: var(--space-sidebar);
+	--spacing-feed: var(--space-feed);
 }
 
 :root {
-  /* =========================================
+	/* =========================================
      1. BASE COLORS (PRIMITIVES)
   ========================================= */
-  --white: #ffffff;
-  --black: #000000;
+	--white: #ffffff;
+	--black: #0c1014;
 
-  /* Grays / Neutrals */
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #efefef;
-  --gray-300: #dbdbdb;
-  --gray-400: #a8a8a8;
-  --gray-500: #737373;
-  --gray-600: #555555;
-  --gray-700: #363636;
-  --gray-800: #262626;
-  --gray-900: #121212;
+	/* Grays / Neutrals */
+	--gray-50: #fafafa;
+	--gray-100: #f5f5f5;
+	--gray-200: #efefef;
+	--gray-300: #dbdbdb;
+	--gray-400: #a8a8a8;
+	--gray-500: #737373;
+	--gray-600: #494d53;
+	--gray-700: #363636;
+	--gray-800: #1f1f22;
+	--gray-900: #121212;
 
-  /* Blues (Brand) */
-  --blue-50: #eff6ff;
-  --blue-100: #dbeafe;
-  --blue-200: #bfdbfe;
-  --blue-300: #93c5fd;
-  --blue-400: #60a5fa;
-  --blue-500: #0095f6; /* Instagram Primary */
-  --blue-600: #1877f2; /* Instagram Hover */
-  --blue-700: #1d4ed8;
-  --blue-800: #1e40af;
-  --blue-900: #1e3a8a;
+	/* Blues (Brand) */
+	--blue-50: #eff6ff;
+	--blue-100: #dbeafe;
+	--blue-200: #bfdbfe;
+	--blue-300: #93c5fd;
+	--blue-400: #60a5fa;
+	--blue-500: #0095f6; /* Instagram Primary */
+	--blue-600: #1877f2; /* Instagram Hover */
+	--blue-700: #1d4ed8;
+	--blue-800: #1e40af;
+	--blue-900: #1e3a8a;
 
-  /* Reds (Destructive / Likes) */
-  --red-50: #fef2f2;
-  --red-100: #fee2e2;
-  --red-200: #fecaca;
-  --red-300: #fca5a5;
-  --red-400: #f87171;
-  --red-500: #ed4956; /* Destructive */
-  --red-600: #ff3040; /* Heart Icon */
-  --red-700: #b91c1c;
-  --red-800: #991b1b;
-  --red-900: #7f1d1d;
+	/* Reds (Destructive / Likes) */
+	--red-50: #fef2f2;
+	--red-100: #fee2e2;
+	--red-200: #fecaca;
+	--red-300: #fca5a5;
+	--red-400: #f87171;
+	--red-500: #ed4956; /* Destructive */
+	--red-600: #ff3040; /* Heart Icon */
+	--red-700: #b91c1c;
+	--red-800: #991b1b;
+	--red-900: #7f1d1d;
 
-  /* Greens (Verified / Success) */
-  --green-50: #f0fdf4;
-  --green-100: #dcfce7;
-  --green-500: #00ba7c; /* Verified Badge */
-  --green-900: #14532d;
+	/* Greens (Verified / Success) */
+	--green-50: #f0fdf4;
+	--green-100: #dcfce7;
+	--green-500: #00ba7c; /* Verified Badge */
+	--green-900: #14532d;
 
-  /* Story Gradient Stops */
-  --story-yellow: #feda75;
-  --story-orange: #fa7e1e;
-  --story-rose: #d62976;
-  --story-purple: #962fbf;
-  --story-blue: #4f5bd5;
+	/* Story Gradient Stops */
+	--story-yellow: #feda75;
+	--story-orange: #fa7e1e;
+	--story-rose: #d62976;
+	--story-purple: #962fbf;
+	--story-blue: #4f5bd5;
 
-  /* Spacing */
-  --space-3xs: 0.125rem; 
-  --space-2xs: 0.25rem;  
-  --space-xs: 0.5rem;    
-  --space-sm: 0.75rem;   
-  --space-md: 1rem;      
-  --space-lg: 1.5rem;    
-  --space-xl: 2rem;      
-  --space-2xl: 3rem;     
-  --space-header: 3.75rem; 
-  --space-sidebar: 15.25rem; 
-  --space-feed: 29.375rem; 
+	/* Spacing */
+	--space-3xs: 0.125rem;
+	--space-2xs: 0.25rem;
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+	--space-header: 3.75rem;
+	--space-sidebar: 15.25rem;
+	--space-feed: 29.375rem;
 
-  /* =========================================
+	/* =========================================
      2. SEMANTIC TOKENS (LIGHT MODE)
   ========================================= */
-  --bg-base: var(--white);
-  --bg-surface: var(--white);
-  --bg-surface-secondary: var(--gray-50); 
-  --bg-elevated: var(--white);
-  --bg-hover: var(--gray-100);
-  --bg-wash: var(--gray-50);
+	--bg-base: var(--white);
+	--bg-surface: var(--white);
+	--bg-surface-secondary: var(--gray-50);
+	--bg-elevated: var(--white);
+	--bg-hover: var(--gray-100);
+	--bg-wash: var(--gray-50);
 
-  --text-primary: var(--black);
-  --text-secondary: var(--gray-500);
-  --text-muted: var(--gray-400);
-  --text-inverse: var(--white);
-  --text-link: var(--blue-500);
+	--text-primary: var(--black);
+	--text-secondary: var(--gray-500);
+	--text-muted: var(--gray-400);
+	--text-inverse: var(--white);
+	--text-link: var(--blue-500);
 
-  --border-subtle: var(--gray-300);
-  --border-secondary: var(--gray-200); 
-  --border-muted: var(--gray-200);
+	--border-subtle: var(--gray-300);
+	--border-secondary: var(--gray-200);
+	--border-muted: var(--gray-200);
 
-  --action-primary: var(--blue-500);
-  --action-primary-hover: var(--blue-600);
-  --action-destructive: var(--red-500);
-  --icon-like: var(--red-600);
+	--action-primary: var(--blue-500);
+	--action-primary-hover: var(--blue-600);
+	--action-destructive: var(--red-500);
+	--icon-like: var(--red-600);
+
+	/* =========================================
+     3. SPACING PRIMITIVES (1rem = 16px)
+  ========================================= */
+	/* Semantic Scale */
+	--space-3xs: 0.125rem;
+	--space-2xs: 0.25rem;
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+
+	/* Structural Layout Dimensions */
+	--space-header: 3.75rem; /* 60px - Mobile top navigation bar */
+	--space-sidebar: 15.25rem; /* 244px - Desktop expanded sidebar */
+	--space-sidebar-narrow: 4.5rem; /* 72px - Tablet collapsed sidebar (icons only) */
+	--space-feed: 29.375rem; /* 470px - Standard width of a feed post/video */
+	--space-suggestions: 20rem; /* 320px - Right side panel for "Suggested for you" */
+	--space-modal-sm: 25rem; /* 400px - Standard popup modal (Settings, Unfollow confirmation) */
+
+	/* Entity Dimensions (Avatars & Icons) */
+	--space-icon-md: 1.5rem; /* 24px - Standard size for Nav icons, Heart, Comment, Share */
+	--space-avatar-xs: 1.5rem; /* 24px - Used for avatars in nested comment replies */
+	--space-avatar-sm: 2rem; /* 32px - Standard profile pic on feed posts & top of sidebar */
+	--space-avatar-md: 3.5rem; /* 56px - Standard profile pic inside the Stories tray */
+	--space-avatar-lg: 9.375rem; /* 150px - The massive profile picture on a user's Profile Page */
 }
 
 /* =========================================
-   3. SEMANTIC TOKENS (DARK MODE)
+   4. SEMANTIC TOKENS (DARK MODE)
 ========================================= */
 .dark,
 [data-theme="dark"] {
-  --bg-base: var(--black);
-  --bg-surface: var(--gray-900);
-  --bg-surface-secondary: var(--gray-800);
-  --bg-elevated: var(--gray-800);
-  --bg-hover: var(--gray-800);
-  --bg-wash: var(--gray-900);
+	--bg-base: var(--black);
+	--bg-surface: var(--gray-800);
+	--bg-surface-secondary: var(--gray-700);
+	--bg-elevated: var(--gray-600);
+	--bg-hover: var(--gray-800);
+	--bg-wash: var(--gray-900);
 
-  --text-primary: var(--white);
-  --text-secondary: var(--gray-400);
-  --text-muted: var(--gray-500);
-  --text-inverse: var(--black);
-  --text-link: #3badf8; /* Lighter blue for dark mode readability */
+	--text-primary: var(--white);
+	--text-secondary: var(--gray-400);
+	--text-muted: var(--gray-500);
+	--text-inverse: var(--black);
+	--text-link: #3badf8;
 
-  --border-subtle: var(--gray-800);
-  --border-secondary: var(--gray-700);
-  --border-muted: var(--gray-700);
+	--border-subtle: var(--gray-600);
+	--border-secondary: var(--gray-500);
+	--border-muted: var(--gray-400);
+}
+
+/* =========================================
+   BASE (ITCSS Generic & Elements)
+   Enhancements to HTML elements
+========================================= */
+@layer base {
+  /* Create a root stacking context (e.g. for Next.js) */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* Modern text wrapping */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Smooth height animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+}
+
+/* =========================================
+   4. COMPONENTS (ITCSS Compositions/Objects)
+   Extract complex, repeating UI patterns
+========================================= */
+@layer components {
+  
+}
+
+/* =========================================
+   5. UTILITIES (ITCSS Utilities)
+   Custom, single-purpose classes
+========================================= */
+@layer utilities {
+  
 }
