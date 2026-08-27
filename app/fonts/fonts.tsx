@@ -4,22 +4,22 @@ import localFont from 'next/font/local';
 export const instagramSans = localFont({
   src: [
     {
-      path: './fonts/Instagram Sans Light.woff2',
+      path: './Instagram Sans Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './fonts/Instagram Sans.woff2',
+      path: './Instagram Sans.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/Instagram Sans Medium.woff2',
+      path: './Instagram Sans Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/Instagram Sans Bold.woff2',
+      path: './Instagram Sans Bold.woff2',
       weight: '700',
       style: 'normal',
     },
@@ -30,7 +30,7 @@ export const instagramSans = localFont({
 
 // 2. Instagram Sans Headline (Display / Story / Logo font)
 export const instagramHeadline = localFont({
-  src: './fonts/Instagram Sans Headline.woff2',
+  src: './Instagram Sans Headline.woff2',
   weight: '700',
   style: 'normal',
   variable: '--font-instagram-headline',
@@ -41,47 +41,47 @@ export const instagramHeadline = localFont({
 export const sfProDisplay = localFont({
   src: [
     {
-      path: './fonts/SFPRODISPLAYTHINITALIC.woff2',
+      path: './SFPRODISPLAYTHINITALIC.woff2',
       weight: '100',
       style: 'italic',
     },
     {
-      path: './fonts/SFPRODISPLAYULTRALIGHTITALIC.woff2',
+      path: './SFPRODISPLAYULTRALIGHTITALIC.woff2',
       weight: '200',
       style: 'italic',
     },
     {
-      path: './fonts/SFPRODISPLAYLIGHTITALIC.woff2',
+      path: './SFPRODISPLAYLIGHTITALIC.woff2',
       weight: '300',
       style: 'italic',
     },
     {
-      path: './fonts/SFPRODISPLAYREGULAR.woff2',
+      path: './SFPRODISPLAYREGULAR.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/SFPRODISPLAYMEDIUM.woff2',
+      path: './SFPRODISPLAYMEDIUM.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/SFPRODISPLAYSEMIBOLDITALIC.woff2',
+      path: './SFPRODISPLAYSEMIBOLDITALIC.woff2',
       weight: '600',
       style: 'italic',
     },
     {
-      path: './fonts/SFPRODISPLAYBOLD.woff2',
+      path: './SFPRODISPLAYBOLD.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/SFPRODISPLAYHEAVYITALIC.woff2',
+      path: './SFPRODISPLAYHEAVYITALIC.woff2',
       weight: '800',
       style: 'italic',
     },
     {
-      path: './fonts/SFPRODISPLAYBLACKITALIC.woff2',
+      path: './SFPRODISPLAYBLACKITALIC.woff2',
       weight: '900',
       style: 'italic',
     },
