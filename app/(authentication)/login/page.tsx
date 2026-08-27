@@ -36,9 +36,10 @@ const page = () => {
 								id="name"
 								type="text"
 								placeholder="Mobile number, username or email"
+                coolPlaceholder
 								required
 							></Input>
-							<Input type="password" placeholder="Password" required></Input>
+							<Input coolPlaceholder type="password" placeholder="Password" required></Input>
 						</div>
 						<Button className="mt-5" size="md" disabled>
 							Log in
